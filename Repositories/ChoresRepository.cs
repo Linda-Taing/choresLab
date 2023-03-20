@@ -18,6 +18,13 @@ public class ChoresRepository
 
     }
 
+    internal Chore CreateChore(Chore choreData)
+    {
+        choreData.Id = dbChores[dbChores.Count - 1].Id + 1;
+        dbChores.Add(new Chore(choreData.Name, choreData.Time, choreData.Location, choreData.Id));
+        return choreData;
+    }
+
     internal List<Chore> GetAllChores()
     {
         return dbChores;

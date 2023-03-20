@@ -18,6 +18,12 @@ public class ChoresService
         return _repo.GetAllChores();
     }
 
+    internal Chore CreateChore(Chore choreData)
+    {
+        Chore chore = _repo.CreateChore(choreData);
+        return chore;
+    }
+
     internal Chore GetOneChore(int id)
     {
         Chore chore = _repo.GetOneChore(id);
