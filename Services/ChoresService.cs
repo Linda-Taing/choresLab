@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 namespace ChoresLab.Services;
 public class ChoresService
 {
-    // public List<Chore> GetAllChores()
-    // {
-    //     return _repo.GetAllChores();
-    // }
+    private readonly ChoresRepository _repo;
+
+    public ChoresService(ChoresRepository repo)
+    {
+        _repo = repo;
+    }
+
+    public List<Chore> GetAllChores()
+    {
+        return _repo.GetAllChores();
+    }
 }

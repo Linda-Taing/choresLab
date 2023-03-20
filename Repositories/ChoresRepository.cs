@@ -17,4 +17,9 @@ public class ChoresRepository
         dbChores.Add(new Chore("Sweep", 30, "garage"));
 
     }
+
+    internal List<Chore> GetAllChores()
+    {
+        return dbChores;
+    }
 }
