@@ -61,5 +61,34 @@ public class ChoresController : ControllerBase
         }
     }
 
+    [HttpDelete("{choreId}")]
+    public ActionResult<Chore> RemoveChore(int choreId)
+    {
+        try
+        {
+            string message = _choresService.RemoveChore(choreId);
+            return Ok(message);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpPut("{id}/delete")]
+
+    public ActionResult<Chore> IsFinished(int id)
+    {
+        try
+        {
+            Chore chore = _choresService.IsFinished(id);
+            return Ok(chore);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
 
 }

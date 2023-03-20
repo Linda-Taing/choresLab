@@ -12,9 +12,9 @@ public class ChoresRepository
 
     public ChoresRepository()
     {
-        dbChores.Add(new Chore("Vacuum", 15, "living room", 1));
-        dbChores.Add(new Chore("Dishes", 15, "kitchen", 2));
-        dbChores.Add(new Chore("Sweep", 30, "garage", 3));
+        dbChores.Add(new Chore("Vacuum", 15, "living room", 5));
+        dbChores.Add(new Chore("Dishes", 15, "kitchen", 10));
+        dbChores.Add(new Chore("Sweep", 30, "garage", 15));
 
     }
 
@@ -36,5 +36,10 @@ public class ChoresRepository
         return chore;
     }
 
+    internal bool RemoveChore(int choreId)
+    {
+        int count = dbChores.RemoveAll(chore => chore.Id == choreId);
+        return count > 0;
+    }
 
 }

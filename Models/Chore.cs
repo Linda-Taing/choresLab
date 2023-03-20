@@ -11,7 +11,7 @@ public class Chore
         Name = name;
         Time = time;
         Location = location;
-        Id = Id;
+        Id = id;
 
     }
 

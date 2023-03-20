@@ -32,4 +32,19 @@ public class ChoresService
             return chore;
         }
     }
+
+    internal Chore IsFinished(int id)
+    {
+        Chore chore = this.GetOneChore(id);
+        chore.IsFinished();
+        return chore;
+    }
+
+    internal string RemoveChore(int choreId)
+    {
+        Chore chore = this.GetOneChore(choreId);
+        bool result = _repo.RemoveChore(choreId);
+        if (!result) throw new Exception("Chores need to be done!");
+        return $"{chore.Name} was too easy, we must add a more difficult task!";
+    }
 }
