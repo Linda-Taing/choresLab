@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace choresLab.Services
+namespace ChoresLab.Services;
+public class ChoresService
 {
-    
+    // public List<Chore> GetAllChores()
+    // {
+    //     return _repo.GetAllChores();
+    // }
 }

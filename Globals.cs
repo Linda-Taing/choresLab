@@ -14,3 +14,6 @@ global using CodeWorks.Utils;
 global using ChoresLab.Repositories;
 global using ChoresLab.Services;
 global using ChoresLab.Models;
+// global using choresLab.Repositories;
+// global using choresLab.Services;
+// global using choresLab.Models;
