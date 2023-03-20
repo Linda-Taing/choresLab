@@ -12,9 +12,9 @@ public class ChoresRepository
 
     public ChoresRepository()
     {
-        dbChores.Add(new Chore("Vacuum", 15, "living room"));
-        dbChores.Add(new Chore("Dishes", 15, "kitchen"));
-        dbChores.Add(new Chore("Sweep", 30, "garage"));
+        dbChores.Add(new Chore("Vacuum", 15, "living room", 1));
+        dbChores.Add(new Chore("Dishes", 15, "kitchen", 2));
+        dbChores.Add(new Chore("Sweep", 30, "garage", 3));
 
     }
 
@@ -22,4 +22,12 @@ public class ChoresRepository
     {
         return dbChores;
     }
+
+    internal Chore GetOneChore(int id)
+    {
+        Chore chore = dbChores.Find(chore => chore.Id == id);
+        return chore;
+    }
+
+
 }
